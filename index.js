@@ -2,6 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const url = require('url');
 const replaceTemplate = require('./modules/replaceTemplate');
+const slugify = require('slugify');
 // synchronys
 
 // const textIn = fs.readFileSync('./txt/input.txt', 'utf-8');
@@ -31,6 +32,8 @@ const tempOverview = fs.readFileSync(`${__dirname}/templates/template-overview.h
 const tempProduct = fs.readFileSync(`${__dirname}/templates/template-product.html`, 'utf-8');
 const tempCard = fs.readFileSync(`${__dirname}/templates/template-card.html`, 'utf-8');
 const productData = JSON.parse(data);
+const slug = productData.map(el => slugify(el.productName, {lower: true}))
+console.log(slug)
 
 
 const server = http.createServer((req, res) => {

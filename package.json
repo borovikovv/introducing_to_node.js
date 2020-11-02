@@ -4,7 +4,7 @@
   "description": "Simple shop to node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/borovikovv/introducing_to_node.js/issues"
   },
-  "homepage": "https://github.com/borovikovv/introducing_to_node.js#readme"
+  "homepage": "https://github.com/borovikovv/introducing_to_node.js#readme",
+  "dependencies": {
+    "slugify": "^1.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
